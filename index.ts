@@ -74,16 +74,42 @@ function createAnimation(
 createAnimation('id', 'fade', 'ease-in', 5, 'infinite');
 
 
-type Config = {protocol: "http" | "https"; port: 3000 | 3001 };
-type Role = {
+// type Config = {protocol: "http" | "https"; port: 3000 | 3001 };
+interface IConfig {
+    protocol: "http" | "https";
+    port: 3000 | 3001
+}
+
+interface IRole {
     role: string;
 }
-type ConfigWithRole = Config & Role;
 
-const serverConfig: ConfigWithRole = {
+interface IConfigWithRole extends IConfig, IRole {
+    test: string;
+    log: Function
+}
+// type Role = {
+//     role: string;
+// }
+// type ConfigWithRole = Config & Role;
+
+const serverConfig: IConfigWithRole = {
     protocol: "https",
     port: 3001,
-    role: 'admin'
+    role: 'admin',
+    test: 'test',
+    log: (msg: string): void => console.log(msg),
+}
+
+
+interface IStyles {
+    [key: string]: string
+}
+
+const styles: IStyles = {
+    position: 'absolute',
+    top: '20px',
+    left: '50px'
 }
 
 
