@@ -73,6 +73,22 @@ function createAnimation(
 
 createAnimation('id', 'fade', 'ease-in', 5, 'infinite');
 
+
+type Config = {protocol: "http" | "https"; port: 3000 | 3001 };
+type Role = {
+    role: string;
+}
+type ConfigWithRole = Config & Role;
+
+const serverConfig: ConfigWithRole = {
+    protocol: "https",
+    port: 3001,
+    role: 'admin'
+}
+
+
+// const serverConfig: {protocol: "http}
+
 // function logBrtMsg (isBirthday: boolean, userName: string, age: number): void {
 //     if (isBirthday) {
 //         console.log(`Congrats ${userName}, age: ${age + 1}`)
