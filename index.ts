@@ -11,6 +11,8 @@ const userData = {
     }
 }
 
+const userDataTuple: [boolean, number, string] = [true, 40, 'John'];
+
 const createError = (msg: string) => {
     throw new Error(msg);
 }
@@ -48,6 +50,25 @@ console.log(second);
 
 const nums: number[] = [3, 5, 6];
 const matrix: number[][] = [[3, 5, 6], [3, 5, 6]];
+
+
+function createAnimation(
+    id: string | number, 
+    animationName: string, 
+    timingFunc: 'ease' | 'ease-out' | 'ease-in'= 'ease',
+    duration: number,
+    iterCount: "infinite" | number):void {
+    // const elem = document.querySelector(`#${id}`) as HTMLElement;
+
+    // if (elem) {
+        // elem.style.animation = `${animationName} ${timingFunc} ${duration} ${iterCount}`;
+    // }
+
+    console.log(`${animationName} ${timingFunc} ${duration} ${iterCount}`);
+
+}
+
+createAnimation('id', 'fade', 'ease-in', 5, 'infinite');
 
 // function logBrtMsg (isBirthday: boolean, userName: string, age: number): void {
 //     if (isBirthday) {

@@ -9,6 +9,7 @@ var userData = {
         error: 'Error'
     }
 };
+var userDataTuple = [true, 40, 'John'];
 var createError = function (msg) {
     throw new Error(msg);
 };
@@ -30,6 +31,15 @@ var first = report[0], second = report[1];
 console.log(second);
 var nums = [3, 5, 6];
 var matrix = [[3, 5, 6], [3, 5, 6]];
+function createAnimation(id, animationName, timingFunc, duration, iterCount) {
+    // const elem = document.querySelector(`#${id}`) as HTMLElement;
+    if (timingFunc === void 0) { timingFunc = 'ease'; }
+    // if (elem) {
+    // elem.style.animation = `${animationName} ${timingFunc} ${duration} ${iterCount}`;
+    // }
+    console.log("".concat(animationName, " ").concat(timingFunc, " ").concat(duration, " ").concat(iterCount));
+}
+createAnimation('id', 'fade', 'ease-in', 5, 'infinite');
 // function logBrtMsg (isBirthday: boolean, userName: string, age: number): void {
 //     if (isBirthday) {
 //         console.log(`Congrats ${userName}, age: ${age + 1}`)
