@@ -35,6 +35,20 @@ function logBrtMsg ({
 
 logBrtMsg(userData);
 
+const departments: string[] = ['dev', 'design', 'marketing'];
+
+const department = departments[0];
+
+const report = departments.filter((item: string) => item !== 'dev')
+                            .map((item: string) => `${item} - done`);
+
+const [first, second] = report;
+
+console.log(second);
+
+const nums: number[] = [3, 5, 6];
+const matrix: number[][] = [[3, 5, 6], [3, 5, 6]];
+
 // function logBrtMsg (isBirthday: boolean, userName: string, age: number): void {
 //     if (isBirthday) {
 //         console.log(`Congrats ${userName}, age: ${age + 1}`)
