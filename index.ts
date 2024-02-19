@@ -52,10 +52,13 @@ const nums: number[] = [3, 5, 6];
 const matrix: number[][] = [[3, 5, 6], [3, 5, 6]];
 
 
+type AnimationTimingFunc = 'ease' | 'ease-out' | 'ease-in';
+type AnimationID = string | number
+
 function createAnimation(
-    id: string | number, 
+    id: AnimationID, 
     animationName: string, 
-    timingFunc: 'ease' | 'ease-out' | 'ease-in'= 'ease',
+    timingFunc: AnimationTimingFunc = 'ease',
     duration: number,
     iterCount: "infinite" | number):void {
     // const elem = document.querySelector(`#${id}`) as HTMLElement;
