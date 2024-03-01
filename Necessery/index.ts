@@ -1,6 +1,6 @@
-const box = document.querySelector('.box') as HTML;
+// const box = document.querySelector('.box') as HTML;
 
-box.textContent
+// box.textContent
 
 
 // const isBirthdayData: boolean = true;
