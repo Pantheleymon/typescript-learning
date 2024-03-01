@@ -14,9 +14,23 @@ let res2 = processingData("1", "slow");
 
 const res3 = processingData<number, string>(10, "slow");
 
-interface DataSaver {
-    processing: <T>(data: T) => T
+function processing<T>(data: T): T {
+    return data;
 }
+
+interface ProcessingFn {
+    
+}
+
+let newFunc: <T>(data: T) => T = processing;
+
+interface DataSaver {
+    processing: typeof processing;
+}
+
+// interface DataSaver {
+//     processing: <T>(data: T) => T
+// }
 
 const saver: DataSaver = {
     // processing(data) {
@@ -25,4 +39,6 @@ const saver: DataSaver = {
     processing: <T>(data: T) => {
         return data
     }
+
+    // processing: processing
 }
