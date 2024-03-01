@@ -83,7 +83,7 @@ const user2: User2 = {
 type OrNull<Type> = Type | null;
 type OneOrMany<Type> = Type | Type[];
 
-const data: OneOrMany<number[]> = [5];
+const datata: OneOrMany<number[]> = [5];
 
 
 
